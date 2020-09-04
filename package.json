@@ -1,0 +1,61 @@
+{
+  "name": "amos-toip",
+  "version": "1.0.0",
+  "private": true,
+  "author": "ilex.h",
+  "scripts": {
+    "clean": "rimraf dist released",
+    "build": "set NODE_ENV=production && npm run clean && webpack",
+    "build:dev": "set NODE_ENV=development && npm run clean && webpack",
+    "watch": "webpack -w",
+    "server": "nodemon server/index.js --watch server",
+    "themes": "amos-run themes",
+    "themes-watch": "amos-run themes-watch",
+    "start": "set NODE_ENV=development && webpack-dev-server",
+    "start2": "set NODE_ENV=development && nodemon --exec \"webpack-dev-server\"",
+    "startDev": "set NODE_ENV=development && webpack-dev-server --config webpack.config.dev.js",
+    "compile": "set NODE_ENV=production && npm run clean && webpack --config webpack.config.prod.js",
+    "compile:dev": "set NODE_ENV=development && npm run clean && webpack --config webpack.config.dev.js",
+    "lint": "eslint src tests",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,css,scss,less,sass}\"",
+    "stylelint": "stylelint src",
+    "zip": "amos-run released2zip",
+    "pub:dev": "npm run compile:dev && amos-run dllreleased",
+    "pub": "npm run build && amos-run dllreleased",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "amos-3d": "^2.1.16",
+    "amos-antd": "^2.0.22",
+    "amos-devgrid": "^1.0.10",
+    "amos-dll": "^2.0.1",
+    "amos-icon": "^1.0.3",
+    "amos-pluggable": "^1.0.6",
+    "amos-processor": "^2.x",
+    "amos-security": "^2.x",
+    "amos-tool": "^1.x",
+    "amos-viz": "^1.2.8",
+    "amos-websocket": "^1.0.3",
+    "ray-code-split": "^1.0.1",
+    "ray-eventpool": "^1.0.0",
+    "ray-mediaquery": "^1.0.0",
+    "ray-progress": "^1.0.0"
+  },
+  "devDependencies": {
+    "react": "~16.3.2",
+    "react-dom": "~16.3.2",
+    "amos-build": "^3.x",
+    "amos-framework": "^1.x",
+    "eslint-config-ray": "^1.0.26",
+    "mockjs": "^1.0.1-beta3",
+    "stylelint-config-ray": "^2.0.5",
+    "ws": "^4.0.0"
+  }
+}

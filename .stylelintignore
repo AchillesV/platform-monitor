@@ -1,0 +1,8 @@
+**/node_modules/**
+lib/
+dist/
+released/
+src/assets/
+src/styles/
+**/*.js
+demo/

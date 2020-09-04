@@ -1,0 +1,98 @@
+$logo-title-color: #183698;
+$btn-bg-color: linear-gradient(180deg, #173b97 0%, #1447a4 0%, #124faa 100%, #1250ab 100%);
+$btn-border-color: #173b97;
+
+#app {
+  .login-content {
+    width: 100%;
+    height: 99.7%;
+    background: url('../../assets/auth/login-bg.png') no-repeat;
+    background-size: cover;
+    border-bottom: 3px solid #3139c7;
+
+    .login-center-content {
+      min-height: 550px;
+
+      .login-center-left {
+        position: relative;
+        display: inline-block;
+        width: 62%;
+        height: 100%;
+        background: url('../../assets/auth/login-desc.png') no-repeat;
+        background-size: 100% 100%;
+
+        .login-language-bottom {
+          top: 13rem;
+          left: 0;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .login-center-right {
+        .login-title {
+          font-size: 22px;
+          color: $logo-title-color;
+        }
+
+        .login-form {
+          .login-form-usericon {
+            background: url('../../assets/auth/user.png') no-repeat;
+            background-position-x: 35%;
+          }
+
+          .login-form-passicon {
+            background: url('../../assets/auth/pwd.png') no-repeat;
+            background-position-x: 35%;
+          }
+
+          .login-form-verifycodeicon {
+            background: url('../../assets/auth/verifycode.png') no-repeat;
+            background-position-x: 35%;
+          }
+
+          .login-submit {
+            background: $btn-bg-color;
+            border: 1px solid $btn-border-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.signup-container {
+  width: 100%;
+  height: 99.7%;
+  background: url('../../assets/auth/login-bg.png') no-repeat;
+  background-size: cover;
+  border-bottom: 3px solid #3139c7;
+
+  .ant-input {
+    color: white;
+    background-color: #272a3f;
+    border: 1px solid #44506e;
+    border-radius: 5px;
+  }
+
+  .ant-btn-primary[disabled] {
+    color: white;
+    background-color: #bdbdbd;
+  }
+
+  .signup-verifica-img {
+    width: 9.4rem;
+    height: 2.7rem;
+  }
+}
+
+.user-mgmt-table {
+  .amos-grid-oper-btns {
+    margin-bottom: 5px;
+
+    .amos-grid-oper-btn {
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+}

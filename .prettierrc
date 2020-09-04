@@ -1,0 +1,50 @@
+{
+  "printWidth": 160,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "parser": "babel",
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "avoid",
+  "requirePragma": false,
+  "proseWrap": "preserve",
+  "overrides": [
+    {
+      "files": ["*.json", ".eslintrc", ".tslintrc", ".prettierrc", ".tern-project", ".travis.yml"],
+      "options": {
+        "parser": "json",
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css",
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.{sass,scss}",
+      "options": {
+        "parser": "scss",
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.less",
+      "options": {
+        "parser": "less",
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
+}

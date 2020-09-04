@@ -1,0 +1,24 @@
+.demo {
+  text-align: center;
+
+  .demo-header {
+    height: 150px;
+    padding: 20px;
+    color: white;
+    background-color: #203957;
+
+    @keyframes demo-logo-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .demo-logo {
+      height: 80px;
+      animation: demo-logo-spin infinite 20s linear;
+    }
+  }
+
+  .demo-introduce {
+    font-size: large;
+  }
+}

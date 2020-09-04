@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "ignore": [".git", ".svn/**/.svn", "dist", "coverage", "tests", "src", "demo", "docs", "node_modules"],
+  "watch":[
+    "webpack.*.js",
+    "./build"
+  ]
+}
